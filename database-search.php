@@ -4,7 +4,7 @@ $query = $_POST['search'];
 
 include "database-connect.php";
 
-$result = mysqli_query($link,"SELECT * FROM todo WHERE name LIKE '%".$query."%' OR description LIKE '%".$query."%'");
+$result = mysqli_query($link,"SELECT * FROM todo WHERE name LIKE '%".$query."%' OR description LIKE '%".$query."%' OR category LIKE '%".$query."%'");
 
 echo mysqli_num_rows($result) . " Results found!<br>";
 
