@@ -5,8 +5,15 @@
 <body>
 
 <p><a href="insert.php">Create</a> </p>
-<p><a href="search.php">Search</a> </p>
+<!-- <p><a href="search.php">Search</a> </p> -->
 
+<form action="database-search.php" method="post">
+    Search:<br>
+    <input type="text" name="search" value=""><br>
+    <input type="submit" name="formSubmit" value="Submit" />
+</form>
+
+<!--
 <?php
 // connect to database
 include("database-connect.php");
@@ -20,6 +27,6 @@ foreach ($result as $row) {
 // close database
 mysqli_close($link);
 ?>
-
+-->
 </body>
 </html>
