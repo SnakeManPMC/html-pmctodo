@@ -52,7 +52,11 @@ foreach ($myfile as $myline => $plaintext) {
 */
     //echo $myTimeStamp . "<br>";
     // insert into database
-    $query = "INSERT INTO todo VALUES('','$splitclit[5]','$splitclit[6]',$myTimeStamp,now(),'$splitclit[4]','$splitclit[2]','$splitclit[3]')";
+    $query = sprintf(
+        "INSERT INTO todo VALUES ('','%s', '%s',$myTimeStamp,now(),'$splitclit[4]','$splitclit[2]','$splitclit[3]')",
+        mysqli_real_escape_string($link, $splitclit[5]),
+        mysqli_real_escape_string($link, $splitclit[6]));
+    //$query = "INSERT INTO todo VALUES('','$splitclit[5]','$splitclit[6]',$myTimeStamp,now(),'$splitclit[4]','$splitclit[2]','$splitclit[3]')";
     mysqli_query($link, $query);
 }
 
