@@ -6,10 +6,11 @@ if(isset($_POST['name']))
 	$category = $_POST['category'];
 	$priority = $_POST['priority'];
 	$status = $_POST['status'];
+    $tstamp = time();
 
 	include "database-connect.php";
 
-	mysqli_query($link, "INSERT INTO todo VALUES('','$name','$description',now(),now(),'$category','$priority','$status')");
+	mysqli_query($link, "INSERT INTO todo VALUES('','$name','$description','$tstamp',now(),'$category','$priority','$status')");
 	$last_id = mysqli_insert_id($link);
 	echo "New record created successfully. Last inserted ID is: " . $last_id;
 	echo "<br>";
