@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `todo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(140) NOT NULL,
+  `name` varchar(150) NOT NULL,
   `description` text NOT NULL,
   `created_at` int(11) NOT NULL,
   `changed_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

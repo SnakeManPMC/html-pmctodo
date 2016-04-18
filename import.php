@@ -9,6 +9,7 @@
 
 // some variable for string length
 $nameLength = 0;
+$nameLong = "";
 
 // connect to database
 include("database-connect.php");
@@ -38,9 +39,13 @@ foreach ($myfile as $myline => $plaintext) {
     $splitclit = explode(",", $plaintext, 7);
 
     // check for string length so we dont try to put too long string into DB
-    if (strlen($splitclit[5] > $nameLength)) {
+    if ( strlen($splitclit[5]) > $nameLength ) {
         $nameLength = strlen($splitclit[5]);
+        $nameLong = $splitclit[5];
     }
+
+    //kinda debug
+    //echo "Name length: " . strlen($splitclit[5]) . "<br>";
 /*
     echo "1st: " . $splitclit[0] . ", ";
     echo "2nd: " . $splitclit[1] . ", ";
@@ -63,7 +68,7 @@ foreach ($myfile as $myline => $plaintext) {
 // close database
 mysqli_close($link);
 
-echo "<br>Max name string length is: " . $nameLength . "<br><br><a href='index.php'>Back to index</a>";
+echo "<br>Max allowed task name lenght in MySQL is 150. Your imported max name string length is: " . $nameLength . "<br>And it is: <br>" . $nameLong . "<br><br><a href='index.php'>Back to index</a>";
 
 ?>
 

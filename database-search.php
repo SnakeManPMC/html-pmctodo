@@ -10,7 +10,7 @@ echo mysqli_num_rows($result) . " Results found!<br>";
 
 if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
-        echo "id: " . $row["id"]. ", <b>" . $row["name"]. "</b>, " . $row["description"]. ". <a href='edit.php?id=" . $row["id"] . "'>Edit</a><br>";
+        echo "id: " . $row["id"] . ", " . $row['category'] . ", <b>" . $row["name"]. "</b>, " . $row["description"]. ". <a href='edit.php?id=" . $row["id"] . "'>Edit</a><br>";
     }
 } else {
     echo "0 results";
