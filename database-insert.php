@@ -15,6 +15,7 @@ if(isset($_POST['name']))
 	echo "New record created successfully. Last inserted ID is: " . $last_id;
 	echo "<br>";
 
+    /*
 	$sql = "SELECT id, name, description, created_at, changed_at, category, priority, status FROM todo";
 	$result = mysqli_query($link, $sql);
 
@@ -28,8 +29,8 @@ if(isset($_POST['name']))
 	} else {
 		echo "0 results";
 	}
-
+*/
 	mysqli_close($link);
-	echo "<br><a href='index.php'>Index</a>";
+	echo "<p><a href='index.php'>Index</a> or <a href='insert.php'>Create a new TODO</a></p>";
 }
 ?>
