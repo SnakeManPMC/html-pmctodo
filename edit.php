@@ -33,6 +33,7 @@ $myStringDate = gmdate('Y-m-d\TH:i:s\Z', $created_at);
 echo "<html>";
 echo "<head>";
 echo "<title>PMCTODO - Edit</title>";
+echo "<LINK href='css.css' rel=stylesheet type='text/css'>";
 echo "</head>";
 echo "<body>";
 

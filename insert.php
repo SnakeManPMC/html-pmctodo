@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>PMCTODO - Insert</title>
+    <LINK href="css.css" rel=stylesheet type="text/css">
 </head>
 <body>
 

@@ -1,0 +1,28 @@
+body
+{
+    background: #333333;
+    color: white;
+
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.small
+{
+    /* 75% of the baseline */
+    font-size: 12px;
+}
+
+.large
+{
+    /* 125% of the baseline */
+    font-size: 20px;
+}
+
+a
+{
+    color: darkorange;
+}
