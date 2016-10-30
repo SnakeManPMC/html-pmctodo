@@ -36,7 +36,7 @@ echo "<title>PMCTODO - Edit</title>";
 echo "<LINK href='css.css' rel=stylesheet type='text/css'>";
 echo "</head>";
 echo "<body>";
-
+echo "<div class=\"search\">";
 echo "<p>You are now <b>EDITING</b> this entry. Delete this entry (careful, no undo!): <a href='delete.php?id=$id'>Delete $id</a></p>";
 
 echo "<p>Created at: $myStringDate, Changed at: $changed_at</p>";
@@ -57,7 +57,7 @@ echo "<input type='submit' name='formSubmit' value='Save' />";
 echo "</form>";
 
 echo "<p><a href='index.php'>Nevermind, back to Index</a> </p>";
-
+echo "</div>";
 echo "</body>";
 echo "</html>";
 

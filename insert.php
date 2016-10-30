@@ -6,6 +6,8 @@
 </head>
 <body>
 
+<div class="insert">
+    <div class="insertheader">Create New TODO</div>
 <form action="database-insert.php" method="post">
 	TODO Task Name (header):<br>
 	<input type="text" name="name" value="" size="150" required><br>
@@ -21,6 +23,7 @@
 </form>
 
 <p><a href="index.php">Back to Index</a> </p>
+</div>
 
 </body>
 </html>

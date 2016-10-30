@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PMCTODO - Database Updated</title>
+    <LINK href="css.css" rel=stylesheet type="text/css">
+</head>
+<body>
+
+<div class="search">
 <?php
 if(isset($_POST['name']))
 {
@@ -24,3 +33,6 @@ if(isset($_POST['name']))
 	echo "<br><a href='index.php'>Index</a>";
 }
 ?>
+</div>
+</body>
+</html>

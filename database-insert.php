@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PMCTODO - Insert</title>
+    <LINK href="css.css" rel=stylesheet type="text/css">
+</head>
+<body>
+
+<div class="search">
 <?php
 if(isset($_POST['name']))
 {
@@ -34,3 +43,7 @@ if(isset($_POST['name']))
 	echo "<p><a href='index.php'>Index</a> or <a href='insert.php'>Create a new TODO</a></p>";
 }
 ?>
+</div>
+</body>
+</html>
+
