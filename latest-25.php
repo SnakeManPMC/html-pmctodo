@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>PMCTODO - Browse All</title>
+<title>PMCTODO - Latest 25</title>
     <LINK href="css.css" rel=stylesheet type="text/css">
 </head>
 <body>
 
 <div class="search">
+    Latest 25 PMCTODOs <a href="index.php">Back to Index</a>
 <?php
 // connect to database
 include("database-connect.php");
 
-$result = mysqli_query($link,"SELECT * FROM todo");
+$result = mysqli_query($link,"SELECT * FROM todo ORDER BY todo_created_at DESC LIMIT 25");
 
-echo "<div class='resultsfound'>" . mysqli_num_rows($result) . " Results found!</div>";
+//echo "<div class='resultsfound'>" . mysqli_num_rows($result) . " Results found!</div>";
 
 foreach ($result as $row) {
     echo "<div class=\"todo\">";
@@ -27,7 +28,7 @@ foreach ($result as $row) {
 mysqli_close($link);
 ?>
 
-<p><a href="index.php">Back to Index</a> </p>
+<p><a href="index.php">Back to Index</a></p>
 </div>
 </body>
 </html>

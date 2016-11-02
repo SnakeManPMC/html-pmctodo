@@ -14,13 +14,13 @@ $result = mysqli_query($link,"SELECT * FROM todo WHERE id=$id");
 
 if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
-        $name = htmlspecialchars($row['name'], ENT_QUOTES);
-        $description = htmlspecialchars($row['description'], ENT_QUOTES);
-        $created_at = $row['created_at'];
-        $changed_at = $row['changed_at'];
-        $category = htmlspecialchars($row['category'], ENT_QUOTES);
-        $priority = htmlspecialchars($row['priority'], ENT_QUOTES);
-        $status = htmlspecialchars($row['status'], ENT_QUOTES);
+        $name = htmlspecialchars($row['todo_name'], ENT_QUOTES);
+        $description = htmlspecialchars($row['todo_description'], ENT_QUOTES);
+        $created_at = $row['todo_created_at'];
+        $changed_at = $row['todo_changed_at'];
+        $category = htmlspecialchars($row['todo_category'], ENT_QUOTES);
+        $priority = htmlspecialchars($row['todo_priority'], ENT_QUOTES);
+        $status = htmlspecialchars($row['todo_status'], ENT_QUOTES);
     }
 } else {
     echo "0 results<br>";

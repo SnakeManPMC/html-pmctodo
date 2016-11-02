@@ -8,7 +8,7 @@
 
 <div class="insert">
     <div class="insertheader">Create New TODO</div>
-<form action="database-insert.php" method="post">
+    <form action="database-insert.php" method="post">
 	TODO Task Name (header):<br>
 	<input type="text" name="name" value="" size="150" required><br>
 	Description:<br>

@@ -11,7 +11,7 @@
         PMCTODO
     </div>
 <p><a href="insert.php">Create / Insert</a> </p>
-<p><a href="browse-all.php">Browse All</a> </p>
+<p><a href="browse-all.php">Browse All</a>, <a href="latest-25.php">Latest 25</a></p>
 
 <form action="database-search.php" method="post">
     Search:<br>
