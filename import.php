@@ -5,6 +5,16 @@
 
 <body>
 
+<p>Format is as follows:<br>
+1 - date<br>
+2 - 0000hrs time<br>
+3 - zero<br>
+4 - zero<br>
+5 - category<br>
+6 - name/title<br>
+7 - description
+</p>
+
 <?php
 
 // some variable for string length
