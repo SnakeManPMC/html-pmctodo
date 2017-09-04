@@ -15,7 +15,7 @@ if(isset($_POST['name']))
 	$category = $_POST['category'];
 	$priority = $_POST['priority'];
 	$status = $_POST['status'];
-    $tstamp = time();
+	$tstamp = time();
 
 	include "database-connect.php";
 

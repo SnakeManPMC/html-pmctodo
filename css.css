@@ -4,7 +4,7 @@ body
     color: white;
 
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
 
     max-width: 100%;
     margin: 0 auto;
@@ -13,13 +13,13 @@ body
 .small
 {
     /* 75% of the baseline */
-    font-size: 12px;
+    font-size: 17px;
 }
 
 .large
 {
     /* 125% of the baseline */
-    font-size: 20px;
+    font-size: 25px;
 }
 
 a
