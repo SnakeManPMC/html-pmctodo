@@ -5,14 +5,18 @@
 
 <body>
 
-<p>Format is as follows:<br>
-1 - date<br>
-2 - 0000hrs time<br>
+<p>Format of import.txt file is as follows:<br>
+1 - date 2017-12-31<br>
+2 - time 2359hrs<br>
 3 - zero<br>
 4 - zero<br>
 5 - category<br>
 6 - name/title<br>
 7 - description
+</p>
+
+<p>Practical example:<br>
+2017-12-31,2359hrs,0,0,arma3bugs,pmc 51km desert needs bigger satellite,describe me please
 </p>
 
 <?php
@@ -39,7 +43,7 @@ foreach ($myfile as $myline => $plaintext) {
     $myFish = $splitclit[0] . "," . $splitclit[1];
 
     // convert to unix timestamp
-    $dateTime = date_create_from_format('m-d-y?Hi*', $myFish);
+    $dateTime = date_create_from_format('Y-m-d?Hi*', $myFish);
     //echo date_format($dateTime, 'Y-m-d Hi') . " NEW MYSQL TIMESTAMP AND INDEX STARTS HERE<br>";
     // unix timestamp for MySQL
     $myTimeStamp = date_timestamp_get($dateTime);
