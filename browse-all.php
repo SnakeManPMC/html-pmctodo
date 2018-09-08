@@ -13,7 +13,7 @@ include("database-connect.php");
 
 $result = mysqli_query($link,"SELECT * FROM todo");
 
-echo "<div class='resultsfound'>" . mysqli_num_rows($result) . " Results found!</div>";
+echo "<div class='resultsfound'>" . mysqli_num_rows($result) . " Results found!</div><a href='index.php'>Back to Index</a>";
 
 foreach ($result as $row) {
     echo "<div class=\"todo\">";
@@ -27,7 +27,7 @@ foreach ($result as $row) {
 mysqli_close($link);
 ?>
 
-<p><a href="index.php">Back to Index</a> </p>
+<p><a href="index.php">Back to Index</a></p>
 </div>
 </body>
 </html>
