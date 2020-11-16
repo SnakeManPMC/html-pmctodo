@@ -8,6 +8,7 @@
 
 <div class="search">
 <?php
+
 if(isset($_POST['name']))
 {
 	$name = $_POST['name'];
@@ -19,7 +20,21 @@ if(isset($_POST['name']))
 
 	include "database-connect.php";
 
-	mysqli_query($link, "INSERT INTO todo VALUES('','$name','$description','$tstamp',now(),'$category','$priority','$status')");
+	if (!$link)
+	{
+		die("Bitch connection failed: " . mysqli_connect_error());
+	}
+
+	$sql = "INSERT INTO todo VALUES(null,'$name','$description','$tstamp',now(),'$category','$priority','$status')";
+
+	if (mysqli_query($link, $sql))
+	{
+		echo "Records inserted successfully.";
+	}
+	else
+	{
+		echo "ERROR: Could not able to execute $sql.<br>" . mysqli_error($link);
+	}
 	$last_id = mysqli_insert_id($link);
 	echo "New record created successfully. Last inserted ID is: " . $last_id;
 	echo "<br>";
@@ -42,6 +57,11 @@ if(isset($_POST['name']))
 	mysqli_close($link);
 	echo "<p><a href='index.php'>Index</a> or <a href='insert.php'>Create a new TODO</a></p>";
 }
+else
+{
+	echo "Name is empty :(";
+}
+
 ?>
 </div>
 </body>

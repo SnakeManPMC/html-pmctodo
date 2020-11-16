@@ -12,7 +12,7 @@
 	TODO Task Name (header):<br>
 	<input type="text" name="name" value="" size="150" required><br>
 	Description:<br>
-	<textarea name="description" cols="80" rows="20" required></textarea><br>
+	<textarea name="description" cols="115" rows="10" required></textarea><br>
 	Category (arma2,arma2,theater,scene,misc etc):<br>
 	<input type="text" name="category" value="" size="20" required><br>
 	Priority (0 low, 1 medium, 2 high, 3 critical):<br>
