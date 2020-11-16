@@ -43,9 +43,9 @@ echo "<p>Created at: $myStringDate, Changed at: $changed_at</p>";
 
 echo "<form action='database-update.php' method='post'>";
 echo "TODO Task Name (header):<br>";
-echo "<input type='text' name='name' value='$name' size='140'><br>";
+echo "<input type='text' name='name' value='$name' size='150'><br>";
 echo "Description:<br>";
-echo "<textarea name='description' cols='80' rows='20'>$description</textarea><br>";
+echo "<textarea name='description' cols='115' rows='15'>$description</textarea><br>";
 echo "Category (arma2,arma2,theater,scene,misc etc):<br>";
 echo "<input type='text' name='category' value='$category' size='20'><br>";
 echo "Priority (0 low, 1 medium, 2 high, 3 critical):<br>";
